@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* min-height, so the body cover all the screen and not its children */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/035/261/379/non_2x/natural-wood-texture-background-surface-of-teak-wooden-desk-texture-free-photo.jpg);
+}
+
+/* Container for calculator*/
+
+#calculator {
+    width: 350px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 29, 29);
+    box-shadow: 10px 10px 1px black;
+    border-radius: 10px;
+    
+}
+
+#brand {
+    font-size: 28px;
+    align-self: center;
+    padding: 10px;
+    color: white;
+    letter-spacing: 10px;
+}
+
+input {
+    background-color: rgb(128, 121, 94);
+    font-weight: bold;
+    border: none;
+    margin: 10px;
+    height: 50px;
+    font-size: 42px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Buttons for numbers, operations and others */ 
+
+#buttons {
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+}
+
+button {
+    font-weight: bold;
+    flex-grow: 1;
+    flex-basis: calc(25% - 8px);
+    font-size: 28px;
+    background-color: rgb(50, 54, 57);
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+#cleanButton, #deleteButton {
+    flex-basis: calc(50% - 8px);
+    background-color: rgb(157, 40, 57);
+}
+
+#operation {
+    background-color: rgb(37, 34, 34);
+}
