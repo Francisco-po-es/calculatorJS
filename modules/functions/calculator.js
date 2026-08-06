@@ -1,11 +1,11 @@
-import {screen} from "./cleanInput.js"
+import { screen } from "../variables/globalVariables.js"
+import { result } from "../variables/globalVariables.js";
 
 export function showResult() {
     let numberLeft = "";
     let numberRight = "";
     let symbols = ["+", "–", "x", "/"];
     let symbolChoosen = "";
-    let result = "";
     const allCaracthers = screen.value;
     let newArray = allCaracthers.split("");
     newArray.forEach(element => {

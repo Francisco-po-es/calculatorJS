@@ -1,4 +1,4 @@
-export let screen = document.querySelector('input');
+import { screen } from "../variables/globalVariables.js";
 
 export function cleanScreen() {
     screen.value = "";

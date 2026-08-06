@@ -1,6 +1,8 @@
-import { cleanScreen, deleteCharacter } from "./modules/cleanInput.js";
-import { displayNumber } from "./modules/getNumbers.js";
-import { showResult } from "./modules/resolveEquations.js";
+import { cleanScreen, deleteCharacter } from "./modules/functions/cleanInput.js";
+import { displayNumber } from "./modules/functions/getNumbers.js";
+import { showResult } from "./modules/functions/calculator.js";
+
+import { result } from "./modules/variables/globalVariables.js";
 
 let deleteButton = document.getElementById("deleteButton");
 let cleanButton = document.getElementById('cleanButton');
