@@ -1,13 +1,18 @@
 import { screen } from "../variables/globalVariables.js"
-let result = ''
+let result = '';
+let numberLeft = "";
+let numberRight = "";
+let symbols = ["+", "–", "x", "/"];
+let symbolChoosen = "";
 
 export function calculator() {
-    let numberLeft = "";
-    let numberRight = "";
-    let symbols = ["+", "–", "x", "/"];
-    let symbolChoosen = "";
-    const allCaracthers = screen.value;
-    let newArray = allCaracthers.split("");
+    separateCharacters();
+    recognizeSymbol();
+}
+
+function separateCharacters() {
+    const allCharacters = screen.value;
+    let newArray = allCharacters.split("");
     newArray.forEach(element => {
         symbols.forEach(symbol => {
             if (element == symbol) {
@@ -18,6 +23,9 @@ export function calculator() {
             }
         });
     });
+}
+
+function recognizeSymbol() {
     if (symbolChoosen == '+') {
         result = Number(numberLeft) + Number(numberRight);
     } else if (symbolChoosen == '–') {
