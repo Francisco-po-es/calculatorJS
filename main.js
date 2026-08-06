@@ -2,8 +2,6 @@ import { cleanScreen, deleteCharacter } from "./modules/functions/cleanInput.js"
 import { displayNumber } from "./modules/functions/getNumbers.js";
 import { showResult } from "./modules/functions/calculator.js";
 
-import { result } from "./modules/variables/globalVariables.js";
-
 let deleteButton = document.getElementById("deleteButton");
 let cleanButton = document.getElementById('cleanButton');
 let equalButton = document.getElementById('equal')

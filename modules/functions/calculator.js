@@ -1,5 +1,5 @@
 import { screen } from "../variables/globalVariables.js"
-import { result } from "../variables/globalVariables.js";
+let result = ''
 
 export function showResult() {
     let numberLeft = "";
