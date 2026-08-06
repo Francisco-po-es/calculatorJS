@@ -31,7 +31,7 @@ body {
     letter-spacing: 10px;
 }
 
-input {
+#screen {
     background-color: rgb(128, 121, 94);
     font-weight: bold;
     border: none;
@@ -73,6 +73,6 @@ button:hover {
     background-color: rgb(157, 40, 57);
 }
 
-#operation {
+.operation, #equal {
     background-color: rgb(37, 34, 34);
 }
