@@ -1,7 +1,7 @@
 import { screen } from "../variables/globalVariables.js"
 let result = ''
 
-export function showResult() {
+export function calculator() {
     let numberLeft = "";
     let numberRight = "";
     let symbols = ["+", "–", "x", "/"];

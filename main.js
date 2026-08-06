@@ -1,6 +1,6 @@
 import { cleanScreen, deleteCharacter } from "./modules/functions/cleanInput.js";
 import { displayNumber } from "./modules/functions/getNumbers.js";
-import { showResult } from "./modules/functions/calculator.js";
+import { calculator } from "./modules/functions/calculator.js";
 
 let deleteButton = document.getElementById("deleteButton");
 let cleanButton = document.getElementById('cleanButton');
@@ -14,7 +14,7 @@ buttons.forEach(element => {
     } else if (element == cleanButton) {
         element.addEventListener("click", cleanScreen);
     } else if (element == equalButton) {
-        element.addEventListener("click", showResult);
+        element.addEventListener("click", calculator);
     } else {
         element.addEventListener("click", displayNumber)
     }
