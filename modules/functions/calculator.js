@@ -7,7 +7,7 @@ let symbolChoosen = "";
 
 export function calculator() {
     separateCharacters();
-    recognizeSymbol();
+    makingOperation();
 }
 
 function separateCharacters() {
@@ -25,7 +25,7 @@ function separateCharacters() {
     });
 }
 
-function recognizeSymbol() {
+function makingOperation() {
     if (symbolChoosen == '+') {
         result = Number(numberLeft) + Number(numberRight);
     } else if (symbolChoosen == '–') {
