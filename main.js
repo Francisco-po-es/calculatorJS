@@ -2,24 +2,46 @@ import { cleanScreen, deleteCharacter } from "./modules/functions/cleanInput.js"
 import { displayNumber } from "./modules/functions/getNumbers.js";
 import { calculator } from "./modules/functions/calculator.js";
 
+let result = false;
+
 let deleteButton = document.getElementById("deleteButton");
 let cleanButton = document.getElementById('cleanButton');
-let equalButton = document.getElementById('equal')
-let numbers = document.querySelectorAll('.number');
-let buttons = document.querySelectorAll('button')
 
-buttons.forEach(element => {
-    if (element == deleteButton) {
-        element.addEventListener("click", deleteCharacter);
-    } else if (element == cleanButton) {
-        element.addEventListener("click", cleanScreen);
-    } else if (element == equalButton) {
-        element.addEventListener("click", calculator);
-    } else {
-        element.addEventListener("click", displayNumber)
-    }
+let equalButton = document.getElementById('equal');
+let point = document.getElementById('point')
+
+let numbers = document.querySelectorAll('.number');
+let operations = document.querySelectorAll('.operation')
+
+numbers.forEach(element => {
+    console.log(result);
+    element.addEventListener('click', (e) => {
+        if (result) {
+            cleanScreen(e);
+            result = false;
+        }
+        displayNumber(e);
+    })
+});
+point.addEventListener("click", displayNumber);
+
+deleteButton.addEventListener("click", deleteCharacter);
+cleanButton.addEventListener("click", cleanScreen);
+
+equalButton.addEventListener("click", () => {
+    calculator();
+    result = true;
 });
 
-
+operations.forEach(element => {
+    element.addEventListener('click', (e) => {
+        if (result) {
+            result = false;
+        }
+        calculator();
+        displayNumber(e);
+    });
+});
+        
 
 
