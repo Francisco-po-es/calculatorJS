@@ -17,3 +17,9 @@ There will be two ways to get the data from the user: Either the user writes wit
 The user has to see the result of the operation they wrote.
 
 - Given your inputs, what are the steps necessary to return the desired output?
+1. Capture the user's input (numbers and operators) and display it as a string on the calculator's screen.
+2. When the equal button is pressed, read the entire string from the screen.
+3. Find the mathematical symbol (+, -, x, /) to separate the string into three parts: the left number, the symbol, and the right number.
+4. Convert the left and right string values into actual Number types.
+5. Perform the math operation depending on the chosen symbol.
+6. Display the final result back on the screen, allowing the user to either clear it or continue calculating.
